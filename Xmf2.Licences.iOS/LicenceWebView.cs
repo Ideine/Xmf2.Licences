@@ -40,7 +40,7 @@ namespace Xmf2.Licences
 		{
 			if (_busyHelper != null)
 			{
-				_busyHelper.IsBusy = true;
+				_busyHelper.IsBusy = false;
 			}
 		}
 
