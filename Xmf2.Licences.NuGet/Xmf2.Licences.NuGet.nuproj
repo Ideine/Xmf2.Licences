@@ -32,23 +32,6 @@
     <ErrorReport>prompt</ErrorReport>
   </PropertyGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Xmf2.Licences.Android\Xmf2.Licences.Android.csproj">
-      <Project>{8C76CE01-5F00-4767-BE38-19C606419D44}</Project>
-      <Name>Xmf2.Licences.Android</Name>
-      <ReferenceSourceTarget>ProjectReference</ReferenceSourceTarget>
-    </ProjectReference>
-    <ProjectReference Include="..\Xmf2.Licences.iOS\Xmf2.Licences.iOS.csproj">
-      <Project>{4AF00568-5110-4B04-8DF7-3D82CA063F07}</Project>
-      <Name>Xmf2.Licences.iOS</Name>
-      <ReferenceSourceTarget>ProjectReference</ReferenceSourceTarget>
-    </ProjectReference>
-    <ProjectReference Include="..\Xmf2.Licences.Core\Xmf2.Licences.Core.csproj">
-      <Project>{265684C2-4DA6-452D-972A-6DFC82FF679B}</Project>
-      <Name>Xmf2.Licences.Core</Name>
-      <ReferenceSourceTarget>ProjectReference</ReferenceSourceTarget>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <PackageReference Include="NuGet.Build.Packaging">
       <Version>0.2.2</Version>
       <PrivateAssets>All</PrivateAssets>
