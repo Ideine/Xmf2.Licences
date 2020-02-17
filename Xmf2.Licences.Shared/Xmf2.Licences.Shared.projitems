@@ -16,6 +16,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Models\Notice.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\Notices.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)LicenceLoader.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)IBusyHelper.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)Models\" />

@@ -42,10 +42,15 @@
       <Name>Xmf2.Licences.iOS</Name>
       <ReferenceSourceTarget>ProjectReference</ReferenceSourceTarget>
     </ProjectReference>
+    <ProjectReference Include="..\Xmf2.Licences.Core\Xmf2.Licences.Core.csproj">
+      <Project>{265684C2-4DA6-452D-972A-6DFC82FF679B}</Project>
+      <Name>Xmf2.Licences.Core</Name>
+      <ReferenceSourceTarget>ProjectReference</ReferenceSourceTarget>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="NuGet.Build.Packaging">
-      <Version>0.2.5-dev.8</Version>
+      <Version>0.2.2</Version>
       <PrivateAssets>All</PrivateAssets>
     </PackageReference>
   </ItemGroup>
