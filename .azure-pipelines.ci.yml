@@ -19,8 +19,8 @@ steps:
     displayName: Build Package
     inputs:
       solution: Xmf2.Licences.Nuget/*.nuproj
-      platform: 'any cpu'
-      configuration: 'release'
+      platform: 'AnyCpu'
+      configuration: 'Release'
       maximumCpuCount: true
     condition: succeeded()
 
