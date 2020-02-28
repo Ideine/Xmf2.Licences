@@ -20,7 +20,7 @@ steps:
     inputs:
       solution: Xmf2.Licences.Nuget/*.nuproj
       platform: 'any cpu'
-      configuration: release
+      configuration: 'release'
       maximumCpuCount: true
     condition: succeeded()
 
