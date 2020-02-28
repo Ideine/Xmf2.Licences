@@ -5,7 +5,10 @@ resources:
         clean: true
         fetchDepth: 5
         lfs: false
-        
+
+trigger:
+  - master
+
 name: Xmf2.Licences-CI-$(Date:yyyyMMdd)$(Rev:.r)
 
 pool:
@@ -25,5 +28,3 @@ pool:
   inputs:
     PathtoPublish: '$(build.artifactstagingdirectory)'
   condition: succeeded()
-
-
