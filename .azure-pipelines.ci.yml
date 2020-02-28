@@ -19,6 +19,7 @@ pool:
   inputs:
     solution: Xmf2.Licences.Nuget/*.nuproj
     platform: 'any cpu'
+    msbuildArgs: '/p:DesktopBuildPackageLocation="$(build.artifactstagingdirectory)\Xmf2.Licences.nupkg"'
     configuration: release
     maximumCpuCount: true
   condition: succeeded()
