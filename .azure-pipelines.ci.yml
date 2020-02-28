@@ -12,7 +12,7 @@ trigger:
 name: Xmf2.Licences-CI-$(Date:yyyyMMdd)$(Rev:.r)
 
 pool:
-  vmImage: 'windows-latest'
+  vmImage: 'macOS-latest'
 
 steps:
   - task: VSBuild@1
