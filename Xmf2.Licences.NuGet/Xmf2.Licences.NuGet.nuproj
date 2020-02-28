@@ -5,22 +5,26 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{DC6759C8-D90A-4D55-8C97-4596BAA3FEC6}</ProjectGuid>
-    <Description>Ideine tools for read and aggregate licence into HTML</Description>
-    <PackageId>Xmf2.Licences</PackageId>
-    <PackageVersion>1.0.0</PackageVersion>
-    <Authors>Ideine, VJubert</Authors>
-    <DevelopmentDependency>false</DevelopmentDependency>
-    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     <OutputType>Exe</OutputType>
     <RootNamespace>Xmf2.Licences</RootNamespace>
     <UsePartialTypes>false</UsePartialTypes>
     <AssemblyName>Xmf2.Licences.NuGet</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
-    <Owners>Ideine, VJubert</Owners>
-    <Copyright>Ideine</Copyright>
-    <Title>Xmf2.Licences</Title>
-    <PackageReleaseNotes>Initial release</PackageReleaseNotes>
   </PropertyGroup>
+
+  <PropertyGroup>
+    <PackageId>Xmf2.Licences</PackageId>
+    <PackageVersion>1.0.0</PackageVersion>
+    <Authors>Ideine, VJubert</Authors>
+    <DevelopmentDependency>false</DevelopmentDependency>
+    <NoPackageAnalysis>true</NoPackageAnalysis>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <PackageReleaseNotes>Initial release</PackageReleaseNotes>
+    <PackageTags>ideine, licence, xmf2</PackageTags>
+    <Description>Ideine tools for read and aggregate licence into HTML</Description>
+    <Copyright>Ideine</Copyright>
+  </PropertyGroup>
+
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>

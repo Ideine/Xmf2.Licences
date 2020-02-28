@@ -1,0 +1,29 @@
+resources:
+  repositories:
+    - repository: self
+      checkoutOptions:
+        clean: true
+        fetchDepth: 5
+        lfs: false
+        
+name: Xmf2.Licences-CI-$(Date:yyyyMMdd)$(Rev:.r)
+
+pool:
+  vmImage: 'windows-latest'
+
+- task: VSBuild@1
+  displayName: Build Package
+  inputs:
+    solution: Xmf2.Licences.Nuget/*.nuproj
+    platform: 'any cpu'
+    configuration: release
+    maximumCpuCount: true
+  condition: succeeded()
+
+- task: PublishBuildArtifacts@1
+  displayName: "Publish Artifact: drop"
+  inputs:
+    PathtoPublish: '$(build.artifactstagingdirectory)'
+  condition: succeeded()
+
+
