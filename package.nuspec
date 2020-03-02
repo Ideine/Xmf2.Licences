@@ -5,11 +5,15 @@
     <version>1.0.0</version>
     <authors>Ideine, VJubert</authors>
     <owners>Ideine, VJubert</owners>
+    <projectUrl>https://github.com/Ideine/Xmf2.Licences</projectUrl>
+    <repository>
+      <url>https://github.com/Ideine/Xmf2.Licences</url>
+    </projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Ideine tools for read and aggregate licence into HTML</description>
     <releaseNotes>Initial release</releaseNotes>
     <copyright>Copyright Ideine 2020</copyright>
-    <tags>licence, xmf2, ideine</tags>
+    <tags>licence xmf2 ideine</tags>
     <dependencies>
       <group targetFramework="monoandroid90">
         <dependency id="MonoAndroid9.0" version="0.0.0.0"/>
