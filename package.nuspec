@@ -10,10 +10,18 @@
     <releaseNotes>Initial release</releaseNotes>
     <copyright>Copyright Ideine 2020</copyright>
     <tags>licence, xmf2, ideine</tags>
+    <dependencies>
+      <group targetFramework="monoandroid90">
+        <dependency id="MonoAndroid9.0" version="0.0.0.0"/>
+      </group>
+      <group targetFramework="xamarinios10">
+        <dependency id="Xamarin.iOS1.0"/>
+      </group>
+    </dependencies>
   </metadata>
-   <files>
-      <file src="Xmf2.Licences.Core\bin\Release\*.dll" target="lib\netstandard2.0"/>
-      <file src="Xmf2.Licences.Android\bin\Release\*.dll" target="lib\monodroid9.00.0"/>
-      <file src="Xmf2.Licences.iOS\bin\Release\*.dll" target="lib\MonoTouch.0"/>
-    </files>
+  <files>
+    <file src="Xmf2.Licences.Core\bin\Release\*.dll" target="lib\netstandard2.0"/>
+    <file src="Xmf2.Licences.Android\bin\Release\*.dll" target="lib\monoandroid90"/>
+    <file src="Xmf2.Licences.iOS\bin\Release\*.dll" target="lib\xamarinios10"/>
+  </files>
 </package>
