@@ -13,9 +13,7 @@
     <copyright>Copyright Ideine 2020</copyright>
     <tags>licence xmf2 ideine</tags>
     <dependencies>
-      <group targetFramework="netstandard2.0">
-        <dependency id="NETStandard2.0" version="0.0.0.0"/>
-      </group>
+      <group targetFramework="netstandard2.0"/>
       <group targetFramework="monoandroid90">
         <dependency id="MonoAndroid9.0" version="0.0.0.0"/>
       </group>
