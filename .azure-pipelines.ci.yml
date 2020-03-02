@@ -19,8 +19,8 @@ steps:
     displayName: Build Package
     inputs:
       solution: Xmf2.Licences.sln
-      platform: 'AnyCpu'
-      configuration: 'Release'
+      platform: 'any cpu'
+      configuration: 'release'
       maximumCpuCount: true
     condition: succeeded()
 
