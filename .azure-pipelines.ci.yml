@@ -24,6 +24,12 @@ steps:
       maximumCpuCount: true
     condition: succeeded()
 
+  - task: NuGetCommand@2
+    inputs:
+      command: 'pack'
+      packagesToPack: 'package.nuspec'
+      versioningScheme: 'off'
+
   - task: PublishBuildArtifacts@1
     displayName: "Publish Artifact: drop"
     inputs:
