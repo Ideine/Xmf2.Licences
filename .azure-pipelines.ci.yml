@@ -12,13 +12,13 @@ trigger:
 name: Xmf2.Licences-CI-$(Date:yyyyMMdd)$(Rev:.r)
 
 pool:
-  vmImage: 'macOS-latest'
+  vmImage: 'windows-latest'
 
 steps:
   - task: VSBuild@1
     displayName: Build Package
     inputs:
-      solution: Xmf2.Licences.Nuget/*.nuproj
+      solution: Xmf2.Licences.sln
       platform: 'AnyCpu'
       configuration: 'Release'
       maximumCpuCount: true

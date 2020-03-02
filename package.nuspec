@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package >
+  <metadata>
+    <id>Xmf2.Licences</id>
+    <version>1.0.0</version>
+    <authors>Ideine, VJubert</authors>
+    <owners>Ideine, VJubert</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Ideine tools for read and aggregate licence into HTML</description>
+    <releaseNotes>Initial release</releaseNotes>
+    <copyright>Copyright Ideine 2020</copyright>
+    <tags>licence, xmf2, ideine</tags>
+  </metadata>
+   <files>
+      <file src="Xmf2.Licences.Core\bin\Release\*.dll" target="lib\netstandard2.0"/>
+      <file src="Xmf2.Licences.Android\bin\Release\*.dll" target="lib\monodroid9.00.0"/>
+      <file src="Xmf2.Licences.iOS\bin\Release\*.dll" target="lib\MonoTouch.0"/>
+    </files>
+</package>
