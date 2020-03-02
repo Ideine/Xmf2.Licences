@@ -8,7 +8,7 @@
     <projectUrl>https://github.com/Ideine/Xmf2.Licences</projectUrl>
     <repository>
       <url>https://github.com/Ideine/Xmf2.Licences</url>
-    </projectUrl>
+    </repository>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Ideine tools for read and aggregate licence into HTML</description>
     <releaseNotes>Initial release</releaseNotes>
