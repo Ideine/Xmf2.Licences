@@ -13,6 +13,8 @@ namespace Xmf2.Licences
 
 		public LicenceWebView(CGRect frame, WKWebViewConfiguration configuration) : base(frame, configuration) { }
 
+		public LicenceWebView() : base(CGRect.Empty, new WKWebViewConfiguration()) { }
+
 		protected LicenceWebView(NSObjectFlag t) : base(t) { }
 
 		protected internal LicenceWebView(IntPtr handle) : base(handle) { }
