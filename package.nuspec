@@ -2,14 +2,15 @@
 <package >
   <metadata>
     <id>Xmf2.Licences</id>
-    <version>1.2.0</version>
+    <version>1.2.1</version>
     <authors>Ideine, VJubert</authors>
     <owners>Ideine, VJubert</owners>
     <projectUrl>https://github.com/Ideine/Xmf2.Licences</projectUrl>
+    <licenseUrl>https://github.com/Ideine/Xmf2.Licences/blob/master/LICENSE</licenseUrl>
     <repository url="https://github.com/Ideine/Xmf2.Licences.git" type="git"/>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Ideine tools for read and aggregate licence into HTML</description>
-    <releaseNotes>add new iOS empty ctor to LicenceView</releaseNotes>
+    <releaseNotes>add licence file</releaseNotes>
     <copyright>Copyright Ideine 2020</copyright>
     <tags>licence xmf2 ideine</tags>
     <dependencies>
