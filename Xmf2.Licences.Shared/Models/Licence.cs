@@ -2,41 +2,35 @@
 
 namespace Xmf2.Licences.Models
 {
-    public class Licence
-    {
-        private readonly ILicenceReaderService _licenceReaderService;
+	public class Licence
+	{
+		private readonly ILicenceReaderService _licenceReaderService;
 
-        public virtual string LicencePathFile { get; set; }
+		public virtual string LicencePathFile { get; set; }
 
-        public virtual string Name { get; set; }
+		private string _cachedSummaryText;
 
-        public virtual string Version { get; set; }
+		private string _cachedFullText;
 
-        public virtual string Url { get; set; }
+		public Licence(ILicenceReaderService readerService)
+		{
+			_licenceReaderService = readerService;
+		}
 
-        private string _cachedSummaryText = null;
+		public async Task<string> GetSummaryText(string licencePathFile)
+		{
+			return _cachedSummaryText ??= await ReadSummaryTextFromPath(licencePathFile);
+		}
 
-        private string _cachedFullText = null;
+		public async Task<string> GetFullText(string licencePathFile)
+		{
+			return _cachedFullText ??= await ReadFullTextFromPath(licencePathFile);
+		}
 
-        public Licence(ILicenceReaderService readerService)
-        {
-            _licenceReaderService = readerService;
-        }
+		protected Task<string> GetContent(string licencePathFile) => _licenceReaderService.GetContent(licencePathFile);
 
-        public async Task<string> GetSummaryText(string licencePathFile)
-        {
-            return _cachedSummaryText ??= await ReadSummaryTextFromPath(licencePathFile);
-        }
+		public Task<string> ReadFullTextFromPath(string licencePathFile) => GetContent(licencePathFile);
 
-        public async Task<string> GetFullText(string licencePathFile)
-        {
-            return _cachedFullText ??= await ReadFullTextFromPath(licencePathFile);
-        }
-
-        protected Task<string> GetContent(string licencePathFile) => _licenceReaderService.GetContent(licencePathFile);
-
-        public Task<string> ReadFullTextFromPath(string licencePathFile) => GetContent(licencePathFile);
-
-        public Task<string> ReadSummaryTextFromPath(string licencePathFile) => GetContent(licencePathFile);
-    }
+		public Task<string> ReadSummaryTextFromPath(string licencePathFile) => GetContent(licencePathFile);
+	}
 }

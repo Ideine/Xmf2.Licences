@@ -9,6 +9,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xmf2.Licences.Android", "Xm
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xmf2.Licences.Core", "Xmf2.Licences.Core\Xmf2.Licences.Core.csproj", "{265684C2-4DA6-452D-972A-6DFC82FF679B}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Misc", "Misc", "{C15C690C-B4EA-4DE3-A2DE-84EE7D7807A9}"
+ProjectSection(SolutionItems) = preProject
+	package.nuspec = package.nuspec
+	.azure-pipelines.ci.yml = .azure-pipelines.ci.yml
+EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
