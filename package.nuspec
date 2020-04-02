@@ -11,7 +11,7 @@
     <repository url="https://github.com/Ideine/Xmf2.Licences.git" type="git"/>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Ideine tools for read and aggregate licence into HTML</description>
-    <releaseNotes>add licence file</releaseNotes>
+    <releaseNotes>fix zoom scale</releaseNotes>
     <copyright>Copyright Ideine 2020</copyright>
     <tags>licence xmf2 ideine</tags>
     <dependencies>
