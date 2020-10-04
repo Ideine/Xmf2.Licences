@@ -1,5 +1,4 @@
-﻿using System;
-using System.IO;
+﻿using System.IO;
 using System.Threading.Tasks;
 
 namespace Xmf2.Licences
@@ -8,7 +7,7 @@ namespace Xmf2.Licences
     {
         public async Task<string> GetContent(string licencePathFile)
         {
-            using var stream = File.OpenRead(licencePathFile);
+            await using var stream = File.OpenRead(licencePathFile);
             using var reader = new StreamReader(stream);
             return await reader.ReadToEndAsync();
         }
