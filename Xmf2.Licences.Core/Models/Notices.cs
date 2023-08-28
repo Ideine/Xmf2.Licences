@@ -4,12 +4,7 @@ namespace Xmf2.Licences.Models
 {
     public class Notices
     {
-        public List<Notice> AllNotices { get; }
-
-        public Notices()
-        {
-            AllNotices = new List<Notice>();
-        }
+        public List<Notice> AllNotices { get; } = new();
 
         public void AddNotice(Notice notice)
         {

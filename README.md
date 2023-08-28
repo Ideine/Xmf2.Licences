@@ -1,4 +1,4 @@
-# XMF2.Licences
+# Xmf2.Licences
 
 Common classes to show licenses information for Ideine's projects.
 

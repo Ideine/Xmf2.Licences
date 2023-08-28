@@ -1,5 +1,4 @@
-﻿using System;
-namespace Xmf2.Licences
+﻿namespace Xmf2.Licences
 {
     public static class LicenceStyle
     {

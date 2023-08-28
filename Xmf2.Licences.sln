@@ -1,15 +1,13 @@
 
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Xmf2.Licences.Shared", "Xmf2.Licences.Shared\Xmf2.Licences.Shared.shproj", "{62F841E8-BC98-4EC7-8137-4A577C3DD628}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xmf2.Licences.iOS", "Xmf2.Licences.iOS\Xmf2.Licences.iOS.csproj", "{4AF00568-5110-4B04-8DF7-3D82CA063F07}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xmf2.Licences.Android", "Xmf2.Licences.Android\Xmf2.Licences.Android.csproj", "{8C76CE01-5F00-4767-BE38-19C606419D44}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xmf2.Licences.Core", "Xmf2.Licences.Core\Xmf2.Licences.Core.csproj", "{265684C2-4DA6-452D-972A-6DFC82FF679B}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Misc", "Misc", "{C15C690C-B4EA-4DE3-A2DE-84EE7D7807A9}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "misc", "misc", "{C15C690C-B4EA-4DE3-A2DE-84EE7D7807A9}"
 ProjectSection(SolutionItems) = preProject
 	package.nuspec = package.nuspec
 	.azure-pipelines.ci.yml = .azure-pipelines.ci.yml
