@@ -3,7 +3,7 @@
   <metadata>
     <id>Xmf2.Licences</id>
     <title>Xmf2.Licences</title>
-    <version>7.0.0-pre</version>
+    <version>7.0.0</version>
     <authors>Ideine, VJubert</authors>
     <owners>Ideine, VJubert</owners>
     <projectUrl>https://github.com/Ideine/Xmf2.Licences</projectUrl>
@@ -11,7 +11,7 @@
     <repository url="https://github.com/Ideine/Xmf2.Licences.git" type="git"/>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Ideine tools for read and aggregate licence into HTML</description>
-    <releaseNotes>fix zoom scale</releaseNotes>
+    <releaseNotes>Add support of net7</releaseNotes>
     <copyright>Copyright Ideine 2020</copyright>
     <tags>licence xmf2 ideine</tags>
     <dependencies>
