@@ -7,7 +7,7 @@
     <authors>Ideine, VJubert</authors>
     <owners>Ideine, VJubert</owners>
     <projectUrl>https://github.com/Ideine/Xmf2.Licences</projectUrl>
-    <licenseUrl>https://github.com/Ideine/Xmf2.Licences/blob/master/LICENSE</licenseUrl>
+    <license type="file">LICENSE</license>
     <repository url="https://github.com/Ideine/Xmf2.Licences.git" type="git"/>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Ideine tools for read and aggregate licence into HTML</description>
@@ -24,5 +24,6 @@
     <file src="Xmf2.Licences.Core\bin\Release\net8.0\*.dll;Xmf2.Licences.Core\bin\Release\net8.0\*.pdb" target="lib\net8.0"/>
     <file src="Xmf2.Licences.Android\bin\Release\net8.0-android\*.dll;Xmf2.Licences.Android\bin\Release\net8.0-android\*.pdb" target="lib\net8.0-android34.0"/>
     <file src="Xmf2.Licences.iOS\bin\Release\net8.0-ios\*.dll;Xmf2.Licences.iOS\bin\Release\net8.0-ios\*.pdb" target="lib\net8.0-ios18.0"/>
+    <file src="LICENSE" />
   </files>
 </package>
