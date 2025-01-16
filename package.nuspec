@@ -3,7 +3,7 @@
   <metadata>
     <id>Xmf2.Licences</id>
     <title>Xmf2.Licences</title>
-    <version>7.0.0</version>
+    <version>8.0.0</version>
     <authors>Ideine, VJubert</authors>
     <owners>Ideine, VJubert</owners>
     <projectUrl>https://github.com/Ideine/Xmf2.Licences</projectUrl>
@@ -11,22 +11,18 @@
     <repository url="https://github.com/Ideine/Xmf2.Licences.git" type="git"/>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Ideine tools for read and aggregate licence into HTML</description>
-    <releaseNotes>Add support of net7</releaseNotes>
+    <releaseNotes>Add support of net8</releaseNotes>
     <copyright>Copyright Ideine 2020</copyright>
     <tags>licence xmf2 ideine</tags>
     <dependencies>
-      <group targetFramework="netstandard2.0"/>
-      <group targetFramework="monoandroid10.0"/>
-      <group targetFramework="net7.0-android31.0"/>
-      <group targetFramework="xamarinios10"/>
-      <group targetFramework="net7.0-ios16.0"/>
+      <group targetFramework="net8.0"/>
+      <group targetFramework="net8.0-android34.0"/>
+      <group targetFramework="net8.0-ios18.0"/>
     </dependencies>
   </metadata>
   <files>
-    <file src="Xmf2.Licences.Core\bin\Release\netstandard2.0\*.dll;Xmf2.Licences.Core\bin\Release\netstandard2.0\*.pdb" target="lib\netstandard2.0"/>
-    <file src="Xmf2.Licences.Android\bin\Release\monoandroid10.0\*.dll;Xmf2.Licences.Android\bin\Release\monoandroid10.0\*.pdb" target="lib\monoandroid10.0"/>
-    <file src="Xmf2.Licences.Android\bin\Release\net7.0-android\*.dll;Xmf2.Licences.Android\bin\Release\net7.0-android\*.pdb" target="lib\net7.0-android31.0"/>
-    <file src="Xmf2.Licences.iOS\bin\Release\xamarin.ios10\*.dll;Xmf2.Licences.iOS\bin\Release\xamarin.ios10\*.pdb" target="lib\xamarinios10"/>
-    <file src="Xmf2.Licences.iOS\bin\Release\net7.0-ios\*.dll;Xmf2.Licences.iOS\bin\Release\net7.0-ios\*.pdb" target="lib\net7.0-ios16.0"/>
+    <file src="Xmf2.Licences.Core\bin\Release\net8.0\*.dll;Xmf2.Licences.Core\bin\Release\net8.0\*.pdb" target="lib\net8.0"/>
+    <file src="Xmf2.Licences.Android\bin\Release\net8.0-android\*.dll;Xmf2.Licences.Android\bin\Release\net8.0-android\*.pdb" target="lib\net8.0-android34.0"/>
+    <file src="Xmf2.Licences.iOS\bin\Release\net8.0-ios\*.dll;Xmf2.Licences.iOS\bin\Release\net8.0-ios\*.pdb" target="lib\net8.0-ios18.0"/>
   </files>
 </package>

@@ -1,7 +1,6 @@
-﻿namespace Xmf2.Licences
+﻿namespace Xmf2.Licences;
+
+public interface IBusyHelper
 {
-    public interface IBusyHelper
-    {
-        bool IsBusy { get; set; }
-    }
+    bool IsBusy { get; set; }
 }

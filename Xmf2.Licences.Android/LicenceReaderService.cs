@@ -3,21 +3,20 @@ using System.Threading.Tasks;
 using Android.Content;
 using Android.Content.Res;
 
-namespace Xmf2.Licences
+namespace Xmf2.Licences;
+
+public class LicenceReaderService : ILicenceReaderService
 {
-    public class LicenceReaderService : ILicenceReaderService
+    private readonly AssetManager _assetManager;
+
+    public LicenceReaderService(Context context)
     {
-        private readonly AssetManager _assetManager;
+        _assetManager = context.Assets;
+    }
 
-        public LicenceReaderService(Context context)
-        {
-            _assetManager = context.Assets;
-        }
-
-        public async Task<string> GetContent(string licencePathFile)
-        {
-            using StreamReader sr = new StreamReader(_assetManager.Open(licencePathFile));
-            return await sr.ReadToEndAsync();
-        }
+    public async Task<string> GetContent(string licencePathFile)
+    {
+        using StreamReader sr = new StreamReader(_assetManager.Open(licencePathFile));
+        return await sr.ReadToEndAsync();
     }
 }

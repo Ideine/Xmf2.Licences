@@ -1,14 +1,11 @@
-<Project Sdk="MSBuild.Sdk.Extras/3.0.44">
-    <PropertyGroup>
-        <TargetFrameworks>Xamarin.iOS10;net7.0-ios</TargetFrameworks>
+<Project Sdk="Microsoft.NET.Sdk">
+<PropertyGroup>
+        <TargetFramework>net8.0-ios</TargetFramework>
         <RootNamespace>Xmf2.Licences</RootNamespace>
         <LangVersion>latest</LangVersion>
         <Nullable>disable</Nullable>
         <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    </PropertyGroup>
-
-    <PropertyGroup>
-        <SupportedOSPlatformVersion Condition="$(TargetFramework.Contains('-ios'))">11.0</SupportedOSPlatformVersion>
+        <SupportedOSPlatformVersion>11.0</SupportedOSPlatformVersion>
     </PropertyGroup>
 
     <ItemGroup Condition=" '$(Configuration)'=='Release' ">

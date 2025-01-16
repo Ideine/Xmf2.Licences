@@ -3,63 +3,61 @@ using CoreGraphics;
 using Foundation;
 using WebKit;
 
-namespace Xmf2.Licences
+namespace Xmf2.Licences;
+
+public class LicenceWebView : WKWebView, IWKNavigationDelegate
 {
-	public class LicenceWebView : WKWebView, IWKNavigationDelegate
+	private IBusyHelper _busyHelper;
+
+	public LicenceWebView(NSCoder coder) : base(coder) { }
+
+	public LicenceWebView(CGRect frame, WKWebViewConfiguration configuration) : base(frame, configuration) { }
+
+	public LicenceWebView() : base(CGRect.Empty, new WKWebViewConfiguration()) { }
+
+	protected LicenceWebView(NSObjectFlag t) : base(t) { }
+
+	protected internal LicenceWebView(IntPtr handle) : base(handle) { }
+
+	public void InitializeDefaultProgressClient(IBusyHelper busyHelper)
 	{
-		private IBusyHelper _busyHelper;
+		_busyHelper = busyHelper;
+		NavigationDelegate = this;
+	}
 
-		public LicenceWebView(NSCoder coder) : base(coder) { }
+	public void LoadLicences(string licenceHtml) => LoadHtmlString(licenceHtml, null);
 
-		public LicenceWebView(CGRect frame, WKWebViewConfiguration configuration) : base(frame, configuration) { }
-
-		public LicenceWebView() : base(CGRect.Empty, new WKWebViewConfiguration()) { }
-
-		protected LicenceWebView(NSObjectFlag t) : base(t) { }
-
-		protected internal LicenceWebView(IntPtr handle) : base(handle) { }
-
-		public void InitializeDefaultProgressClient(IBusyHelper busyHelper)
+	[Export("webView:didStartProvisionalNavigation:")]
+	public void DidStartProvisionalNavigation(WKWebView webView, WKNavigation navigation)
+	{
+		if (_busyHelper is { IsBusy: false })
 		{
-			_busyHelper = busyHelper;
-			NavigationDelegate = this;
+			_busyHelper.IsBusy = true;
 		}
+	}
 
-		public void LoadLicences(string licenceHtml) => LoadHtmlString(licenceHtml, null);
-
-		[Export("webView:didStartProvisionalNavigation:")]
-		public void DidStartProvisionalNavigation(WKWebView webView, WKNavigation navigation)
+	[Export("webView:didFinishNavigation:")]
+	public void DidFinishNavigation(WKWebView webView, WKNavigation navigation)
+	{
+		if (_busyHelper != null)
 		{
-			if (_busyHelper != null && !_busyHelper.IsBusy)
-			{
-				_busyHelper.IsBusy = true;
-			}
+			_busyHelper.IsBusy = false;
 		}
+	}
 
-
-		[Export("webView:didFinishNavigation:")]
-		public void DidFinishNavigation(WKWebView webView, WKNavigation navigation)
+	protected override void Dispose(bool disposing)
+	{
+		try
 		{
-			if (_busyHelper != null)
+			if (disposing)
 			{
-				_busyHelper.IsBusy = false;
+				NavigationDelegate = null;
+				_busyHelper = null;
 			}
 		}
-
-		protected override void Dispose(bool disposing)
+		finally
 		{
-			try
-			{
-				if (disposing)
-				{
-					NavigationDelegate = null;
-					_busyHelper = null;
-				}
-			}
-			finally
-			{
-				base.Dispose(disposing);
-			}
+			base.Dispose(disposing);
 		}
 	}
 }

@@ -1,9 +1,8 @@
 ﻿using System.Threading.Tasks;
 
-namespace Xmf2.Licences
+namespace Xmf2.Licences;
+
+public interface ILicenceReaderService
 {
-    public interface ILicenceReaderService
-    {
-        Task<string> GetContent(string licencePathFile);
-    }
+    Task<string> GetContent(string licencePathFile);
 }

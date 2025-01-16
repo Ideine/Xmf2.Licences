@@ -1,40 +1,28 @@
-﻿using System;
+﻿namespace Xmf2.Licences.Models;
 
-namespace Xmf2.Licences.Models
+public class Notice
 {
-    public class Notice
+    public string Name { get; }
+    public string Url { get; }
+    public string Copyright { get; }
+    public Licence License { get; }
+
+    public Notice(string name, string url, string filePath, ILicenceReaderService readerService, string copyright = null)
     {
-        public string Name { get; }
-        public string Url { get; }
-        public string Copyright { get; }
-        public Licence License { get; }
-
-        public Notice(string name, string url, string filePath, ILicenceReaderService readerService, string copyright = null)
+        Name = name;
+        Url = url;
+        Copyright = copyright ?? string.Empty;
+        License = new Licence(readerService)
         {
-            Name = name;
-            Url = url;
-            Copyright = copyright ?? string.Empty;
-            License = new Licence(readerService)
-            {
-                LicencePathFile = filePath
-            };
-        }
+            LicencePathFile = filePath
+        };
+    }
 
-        public Notice(string name, string url, Licence license, string copyright = null)
-        {
-            Name = name;
-            Url = url;
-            Copyright = copyright ?? string.Empty;
-            License = license;
-        }
-
-        [Obsolete("Prefer use ctor with optional copyright value")]
-        public Notice(string name, string url, string copyright, Licence license)
-        {
-            Name = name;
-            Url = url;
-            Copyright = copyright;
-            License = license;
-        }
+    public Notice(string name, string url, Licence license, string copyright = null)
+    {
+        Name = name;
+        Url = url;
+        Copyright = copyright ?? string.Empty;
+        License = license;
     }
 }
